@@ -3,126 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio de Rebe Silva: Diseño Gráfico, Desarrollo de Sistemas y Escritura.">
-    <title>Rebe Silva | Creatividad y Código</title>
-    
-    <link rel="icon" type="image/png" href="img/favicon.png">
-    
+    <title>Rebe Silva | Código, Diseño & Letras</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header>
-        <div class="logo">Rebe.</div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#habilidades">¿Qué hago?</a></li>
-                <li><a href="#portafolio">Proyectos</a></li>
-                <li><a href="#blog">Blog/Libros</a></li>
-            </ul>
-        </nav>
-        <a href="#contacto" class="btn-primary">Contáctame</a>
-    </header>
+    
+    <div id="header-container"></div>
 
     <main>
-        <section id="inicio" class="hero">
+        <section class="hero bg-wine">
             <div class="hero-text">
-                <h1>Desarrollo ideas en <span class="highlight">diseño, código y letras</span></h1>
-                <p>Bienvenida a mi espacio digital. Aquí comparto mi viaje creando interfaces, desarrollando sistemas, gestionando marcas y escribiendo historias que atrapan.</p>
+                <span class="eyebrow">Detrás de la pantalla y el papel</span>
+                <h1>Diseño, lógica y <br><span class="italic-serif">mucha pasión.</span></h1>
+                <p>Soy Rebeca. Mi mente vive entre la estructura estricta del código, la estética del diseño gráfico y los mundos intensos de ficción que escribo. Si buscas a alguien con ojo crítico para lo visual, lógica para sistemas y presencia para tu marca, estás en el lugar correcto.</p>
                 <div class="hero-buttons">
-                    <a href="#portafolio" class="btn-primary">Ver Portafolio</a>
-                    <a href="#blog" class="btn-secondary">Leer mis Historias</a>
+                    <a href="#mediakit" class="btn-light">Ver Media Kit</a>
+                    <a href="#letras" class="btn-outline-light">Leer mis libros</a>
                 </div>
             </div>
             <div class="hero-image">
-                <div class="image-placeholder floating">
-                    <p>[Tu Foto Aquí]</p>
+                <div class="image-placeholder arch">
+                    <p>[Tu Foto Principal Aquí]</p>
                 </div>
             </div>
         </section>
 
-        <section id="habilidades" class="skills">
-            <div class="skills-grid">
-                <div class="skills-image">
-                     <div class="image-placeholder rectangle">
-                        <p>[Tu setup de trabajo o diseño]</p>
-                    </div>
-                </div>
-                <div class="skills-content">
-                    <h2>Lo que encontrarás en este espacio</h2>
-                    
-                    <div class="skill-item">
-                        <div class="icon">🎨</div>
-                        <div>
-                            <h3>Diseño Gráfico & Redes</h3>
-                            <p>Creación de identidades visuales, materiales POP y gestión estratégica de marcas para clientes y empresas.</p>
-                        </div>
-                    </div>
+        <div class="marquee-wrapper">
+            <div class="marquee-content">
+                <span>💻 Desarrolladora</span> • <span>📸 Creadora UGC</span> • <span>📖 Escritora de Romance</span> • <span>🎨 Diseñadora Gráfica</span> • 
+                <span>💻 Desarrolladora</span> • <span>📸 Creadora UGC</span> • <span>📖 Escritora de Romance</span> • <span>🎨 Diseñadora Gráfica</span> •
+            </div>
+        </div>
 
-                    <div class="skill-item">
-                        <div class="icon">💻</div>
-                        <div>
-                            <h3>Sistemas & Desarrollo</h3>
-                            <p>Lógica de programación, desarrollo de aplicaciones móviles y creación de soluciones tecnológicas funcionales.</p>
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <div class="icon">📖</div>
-                        <div>
-                            <h3>Escritura Literaria</h3>
-                            <p>Creación de mundos, novelas de ficción, tramas llenas de acción y reflexiones personales.</p>
+        <section id="letras" class="books-section bg-light-pink">
+            <div class="section-header">
+                <h2>Mundos de tinta y papel</h2>
+                <p>Descubre mis novelas. Romance oscuro, misterio y personajes inolvidables.</p>
+            </div>
+            <div class="bento-grid">
+                <div class="bento-card bg-white book-card">
+                    <div class="book-cover">[Portada Libro 1]</div>
+                    <div class="book-info">
+                        <h3>Título de tu libro</h3>
+                        <p>Una breve sinopsis atrapante de tu libro. Aquí cuentas de qué va la historia para enganchar al lector.</p>
+                        <div class="book-links">
+                            <a href="#" class="btn-link">Comprar en Amazon →</a>
+                            <a href="#" class="btn-link">Ver Booktrailer 🎬</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="portafolio" class="projects">
-            <h2>Mis Proyectos Recientes</h2>
-            <p>Un vistazo a lo que he estado construyendo en mis diferentes facetas.</p>
-            
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="card-img design-img"></div>
-                    <div class="card-info">
-                        <span class="tag">Diseño Gráfico</span>
-                        <h3>Branding y Gestión de Redes</h3>
-                        <p>Diseño de identidad visual, contenido para redes y material corporativo para clientes de salud, moda y empresas como Sigetotal.</p>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="card-img dev-img"></div>
-                    <div class="card-info">
-                        <span class="tag">Sistemas</span>
-                        <h3>App Móvil Universitaria</h3>
-                        <p>Desarrollo de interfaz y lógica de programación para una aplicación móvil funcional creada desde cero.</p>
-                    </div>
-                </div>
+        <section id="diseño" class="design-section bg-white">
+            <div class="section-header center">
+                <h2 class="wine-text">El apartado creativo</h2>
+                <p>Identidad visual, branding y diseño que conecta y convierte.</p>
+            </div>
+            <div class="design-grid">
+                <div class="design-item tall">[Mockup Branding]</div>
+                <div class="design-item wide">[Diseño Redes Sociales]</div>
+                <div class="design-item">[Logo 1]</div>
+                <div class="design-item">[Logo 2]</div>
+            </div>
+            <div class="center-btn">
+                <a href="#contacto" class="btn-wine">Solicita mis servicios de diseño</a>
+            </div>
+        </section>
 
-                <div class="card">
-                    <div class="card-img book-img"></div>
-                    <div class="card-info">
-                        <span class="tag">Escritura</span>
-                        <h3>Novela de Ficción y Mafia</h3>
-                        <p>Desarrollo de personajes complejos y tramas de suspenso, además de proyectos en el mundo del fanfiction.</p>
-                    </div>
+        <section id="apps" class="apps-section bg-wine">
+            <div class="section-header light-text">
+                <h2>Lógica y Desarrollo</h2>
+                <p>Creación de aplicaciones de escritorio y soluciones tecnológicas a medida.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card dark-card">
+                    <div class="card-icon">🖥️</div>
+                    <h3>Apps de Escritorio</h3>
+                    <p>Desarrollo de software robusto para optimizar procesos empresariales.</p>
+                </div>
+                <div class="service-card dark-card">
+                    <div class="card-icon">📱</div>
+                    <h3>Sistemas Web</h3>
+                    <p>Plataformas interactivas uniendo la mejor experiencia de usuario (UX/UI) con código limpio.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="mediakit" class="mediakit-section bg-light-pink">
+            <div class="section-header center">
+                <h2 class="wine-text">Media Kit & Embajadora de marca</h2>
+                <p>Le doy rostro y voz a tu marca. Experiencia como imagen B2B e influencer.</p>
+            </div>
+            <div class="ig-grid">
+                <div class="ig-post">
+                    <div class="video-placeholder">[Video Reel/TikTok hablando a cámara]</div>
+                    <p class="ig-caption"><strong>@rebesiro</strong> Creando contenido auténtico para marcas que quieren destacar.</p>
+                </div>
+                <div class="ig-post">
+                    <div class="video-placeholder">[Foto/Video UGC de producto]</div>
+                    <p class="ig-caption"><strong>@rebesiro</strong> Reseñas, unboxings y vlogs estilo de vida.</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer id="contacto" class="footer">
-        <h2>¿Lista para crear algo increíble?</h2>
-        <p>Hablemos sobre tu próximo proyecto de diseño, desarrollo o simplemente para compartir ideas.</p>
-        <a href="mailto:tu-correo@email.com" class="btn-primary">Envíame un correo</a>
-        <div class="social-links">
-            <p>© 2026 Rebe Silva. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+    <div id="footer-container"></div>
+
+    <script src="js/main.js"></script>
 
 </body>
 </html>
