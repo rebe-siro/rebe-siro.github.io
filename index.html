@@ -114,5 +114,29 @@
 
     <script src="js/main.js"></script>
 
+    <script>
+    document.addEventListener("click", (e) => {
+        
+        if (e.target.closest(".hamburger")) {
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+            
+            if (hamburger && navMenu) {
+                hamburger.classList.toggle("active");
+                navMenu.classList.toggle("active");
+            }
+        }
+        if (e.target.closest(".nav-links a") || e.target.closest(".nav-menu .btn-primary")) {
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+            
+            if (hamburger && navMenu) {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+            }
+        }
+    });
+</script>
+
 </body>
 </html>

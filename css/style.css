@@ -37,6 +37,31 @@ h1, h2, h3, .logo {
 .bg-white { background-color: var(--white); }
 
 /* --- NAVEGACIÓN --- */
+
+/* --- AJUSTES NAVEGACIÓN DESKTOP --- */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Ocultamos la hamburguesa en escritorio */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--wine); /* Usa tu color vino para las líneas */
+    border-radius: 5px;
+}
+
+
 header {
     display: flex; justify-content: space-between; align-items: center;
     padding: 20px 5%; background-color: var(--white);
@@ -546,17 +571,56 @@ section { padding: 100px 5%; }
 
 @media screen and (max-width: 768px) {
     /* --- NAVEGACIÓN --- */
+    
     header {
-        flex-direction: column;
-        padding: 15px 5%;
-        gap: 15px;
-    }
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
+        flex-direction: row; /* Fuerza a que el logo y la hamburguesa estén en la misma línea */
+        justify-content: space-between;
+        padding: 20px 5%;
     }
 
+    /* Mostramos la hamburguesa */
+    .hamburger {
+        display: block;
+        z-index: 101; /* Para que quede por encima del menú desplegado */
+    }
+
+    /* Estilo del menú desplegable (Oculto por defecto, deslizado hacia la derecha) */
+    .nav-menu {
+        position: fixed;
+        left: -100%; /* Lo esconde fuera de la pantalla */
+        top: 0;
+        gap: 0;
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--pink-soft);
+        width: 100%;
+        height: 100vh; /* Ocupa toda la pantalla vertical */
+        text-align: center;
+        transition: 0.3s ease-in-out;
+        z-index: 100;
+        box-shadow: var(--shadow-soft);
+    }
+
+    /* Clase que se activa con JavaScript para mostrar el menú */
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .nav-links li a {
+        font-size: 1.5rem; /* Letra más grande para tocar bien en el cel */
+    }
+
+    /* Animación de la hamburguesa convirtiéndose en una "X" */
+    .hamburger.active .bar:nth-child(2) { opacity: 0; }
+    .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    
     /* --- TIPOGRAFÍA (Ajuste de tamaños) --- */
     .hero-text h1 { font-size: 2.8rem; }
     .section-header h2 { font-size: 2.2rem; }
