@@ -535,3 +535,129 @@ section { padding: 100px 5%; }
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
+
+
+
+/* =========================================
+   VERSIÓN TELÉFONO (Responsive Design)
+   Pega esto al final de tu archivo CSS
+========================================= */
+
+@media screen and (max-width: 768px) {
+    /* --- NAVEGACIÓN --- */
+    header {
+        flex-direction: column;
+        padding: 15px 5%;
+        gap: 15px;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* --- TIPOGRAFÍA (Ajuste de tamaños) --- */
+    .hero-text h1 { font-size: 2.8rem; }
+    .section-header h2 { font-size: 2.2rem; }
+    .footer-box h2 { font-size: 2rem; }
+    .mk-hero-content h1 { font-size: 2.8rem; }
+    .pricing-hero h1, .books-hero h1, .tech-hero h1, .design-hero h1 { font-size: 2.8rem; }
+    .book-details h2, .tech-info h2, .management-text h2 { font-size: 2.2rem; }
+    .price { font-size: 2.5rem; }
+    .stat-item h3 { font-size: 2.2rem; }
+
+    /* --- HERO SECTIONS --- */
+    .hero, .mk-hero, .tech-showcase, .management-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 5%;
+        gap: 40px;
+    }
+    .hero-text {
+        padding-right: 0;
+    }
+    .hero-text p, .mk-hero-content p, .design-hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .image-placeholder.arch {
+        width: 100%;
+        max-width: 320px;
+        height: 400px;
+    }
+
+    /* --- SECCIONES Y GRIDS COMUNES --- */
+    section {
+        padding: 60px 5%;
+    }
+    .services-grid, .ig-grid, .reels-grid, .pricing-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-card, .ig-post, .pricing-card {
+        width: 100%;
+        max-width: 100%;
+        min-width: unset;
+    }
+
+    /* --- DISEÑO & PORTAFOLIO (Grid a 1 columna) --- */
+    .design-grid, .portfolio-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax(250px, auto);
+    }
+    /* Quitamos el span para que no se desborden en el teléfono */
+    .design-item.wide, .portfolio-item.wide { grid-column: span 1; }
+    .design-item.tall, .portfolio-item.tall { grid-row: span 1; }
+
+    /* --- LIBROS --- */
+    .book-card, .book-showcase-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+        gap: 25px;
+    }
+    .book-cover, .book-cover-large {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        aspect-ratio: 2 / 3;
+        margin: 0 auto;
+    }
+    .platform-buttons {
+        justify-content: center;
+    }
+
+    /* --- MULTIMEDIA / REVIEWS --- */
+    .multimedia-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .video-yt-wrapper, .video-ig-wrapper {
+        width: 100%;
+        min-width: unset;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    /* --- TECNOLOGÍA & MOCKUPS --- */
+    .tech-showcase.reverse {
+        flex-direction: column; /* Anula el reverse en móvil para mantener el orden */
+    }
+    .phone-mockup {
+        width: 100%;
+        max-width: 280px;
+    }
+    .desktop-mockup {
+        height: 200px; /* Un poco más pequeño para que no ocupe toda la pantalla vertical */
+    }
+
+    /* --- FOOTER --- */
+    .footer-box {
+        padding: 40px 20px;
+    }
+}
