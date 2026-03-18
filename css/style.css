@@ -1234,3 +1234,99 @@ h2, .logo h2, .price, .accion-box h3 {
     color: var(--medium-blue);
 }
 
+/* =========================================
+   RESPONSIVE PARA TELÉFONOS (Mejorado)
+   ========================================= */
+@media (max-width: 768px) {
+    /* 1. Header y Navegación */
+    .static-top-bar {
+        display: none; /* Ocultamos la barra superior en móvil para ganar espacio */
+    }
+
+    .main-header {
+        top: 0; /* Pegado al techo */
+        padding: 10px 0;
+    }
+
+    .main-header.is-floating {
+        width: 100%; /* Ocupa todo el ancho en móvil */
+        border-radius: 0; /* Quitamos bordes redondeados en modo flotante */
+        top: 0;
+    }
+
+    .header-container {
+        flex-direction: column; /* Stack de logo y menú */
+        gap: 10px;
+    }
+
+    .logo h2 {
+        font-size: 1.8rem;
+    }
+
+    .main-nav ul {
+        gap: 15px;
+        flex-wrap: wrap; /* Permite que los links bajen si no caben */
+        justify-content: center;
+    }
+
+    .main-nav a {
+        font-size: 0.75rem;
+    }
+
+    .btn-nav {
+        padding: 6px 12px;
+    }
+
+    /* 2. Sección Hero (Video e Imagen) */
+    .hero {
+        padding: 120px 0 60px 0; /* Ajustamos espacio para el menú stackeado */
+        min-height: auto;
+        text-align: center;
+    }
+
+    .hero-content {
+        flex-direction: column; /* Texto arriba, imagen abajo */
+        gap: 30px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.8rem; /* Reducimos el tamaño gigante de Bebas Neue */
+        margin-bottom: 15px;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .hero-image {
+        order: 2; /* Aseguramos que la imagen flote abajo del texto */
+        width: 100%;
+    }
+
+    .img-fluid-mockup {
+        max-width: 90%; /* Que no toque los bordes del cel */
+        margin: 0 auto;
+    }
+
+    /* 3. Secciones Generales */
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .grid-3, .grid-2, .grid-4 {
+        grid-template-columns: 1fr; /* Todo a una sola columna */
+        gap: 20px;
+    }
+}
+
+/* Ajuste extra para pantallas muy pequeñas (iPhone SE, etc) */
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+    
+    .main-nav ul {
+        gap: 8px;
+    }
+}
