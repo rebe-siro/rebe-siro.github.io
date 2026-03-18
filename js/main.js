@@ -300,22 +300,24 @@ function initVideoModal() {
 document.addEventListener('DOMContentLoaded', async () => {
     // 1. INICIALIZAR EL VIDEO PRIMERO (Para que funcione de inmediato)
     initVideoModal();
-    
-    // 2. Inicializar el resto de las lógicas
-    initAccordion();     
+
+    // 2. Inicializar animaciones y carrusel (que están en el index.html principal)
     initScrollAnimations(); 
     initDraggableCarousel();
-
-    // 3. Cargar componentes (Esto puede tardar, por eso va al final)
+    
     const headerPlaceholder = document.getElementById('header-placeholder');
     if (headerPlaceholder) {
         await loadComponent('header-placeholder', 'header.html');
-        // Una vez cargado el header, inicializamos su comportamiento dinámico
         initDynamicHeader(); 
     }
 
+    // 4. Cargar el Footer (Donde están las FAQs)
     const footerPlaceholder = document.getElementById('footer-placeholder');
     if (footerPlaceholder) {
         await loadComponent('footer-placeholder', 'footer.html');
+        
+        // ¡MOVER AQUÍ! Solo inicializamos el acordeón 
+        // DESPUÉS de que el footer terminó de cargar.
+        initAccordion(); 
     }
 });
